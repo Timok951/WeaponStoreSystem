@@ -1,0 +1,32 @@
+﻿<Window x:Class="WeaponStoreSystem.Order"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeaponStoreSystem"
+        mc:Ignorable="d"
+        Title="Order" MinHeight="450" MinWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="AmmountofAmmoBox" HorizontalAlignment="Center" Grid.Row="0" TextWrapping="Wrap" Text="Amount of Ammo" VerticalAlignment="Center" Width="247" PreviewTextInput="AmmountofAmmoBox_PreviewTextInput"/>
+        <TextBox x:Name="AmmountofWeaponBox" HorizontalAlignment="Center" Grid.Row="0" TextWrapping="Wrap" Text="Amount of weapons" VerticalAlignment="Center" Width="247" Grid.Column="1" PreviewTextInput="AmmountofWeaponBox_PreviewTextInput"/>
+        <ComboBox Grid.Column="2" HorizontalAlignment="Center" Grid.Row="0" Width="247" x:Name="AmmoTypeCombobobox"/>
+        <ComboBox Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" Width="247" x:Name="WeaponTypeCombobobox"/>
+        <ComboBox Grid.Column="1" HorizontalAlignment="Center" Grid.Row="1" Width="247" x:Name="Clientcombobox" />
+        <ComboBox HorizontalAlignment="Center" Grid.Row="1" Width="247" x:Name="WorkerCombobox" />
+        <Button Content="Button" HorizontalAlignment="Left" Margin="242,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="746" Grid.Column="0" Click="Button_Click" Grid.ColumnSpan="3" x:Name="Summbox"/>
+        <TextBox HorizontalAlignment="Left" Height="35" Margin="10,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Summ" VerticalAlignment="Top" Width="1211" Grid.ColumnSpan="3"  x:Name="SummBox" PreviewTextInput="SummBox_PreviewTextInput"/>
+    </Grid>
+</Window>

@@ -1,0 +1,33 @@
+﻿<Page x:Class="WeaponStoreSystem.LicensePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WeaponStoreSystem"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LicensePage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,10,0,-375" x:Name="LicenseGrid" IsReadOnly="True" SelectionChanged="LicenseGrid_SelectionChanged" Loaded="LicenseGrid_Loaded" />
+        <Button Content="Add" x:Name="Add" HorizontalAlignment="Center" VerticalAlignment="Center" Width="247" Height="30" Click="Add_Click" />
+        <Button Content="Edit" HorizontalAlignment="Center" VerticalAlignment="Center" Width="247" Grid.Column="1" Height="30" x:Name="EditButton" Click="EditButton_Click" />
+        <Button Content="Delete" HorizontalAlignment="Center" VerticalAlignment="Center" Width="247" Grid.Column="2" Height="30" x:Name="DeleteButton" Click="DeleteButton_Click" />
+        <TextBox x:Name="LicenseNumber" HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Text="LicenseId" VerticalAlignment="Center" Width="247" PreviewTextInput="LicenseNumber_PreviewTextInput"/>
+        <ComboBox Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" Width="247" x:Name="LicenseTypeCombobox" />
+        <Button Content="Import" HorizontalAlignment="Center" VerticalAlignment="Center" Width="247" Grid.Column="1" Height="30" x:Name="ImportButton" Grid.Row="1" Click="ImportButton_Click" />
+
+    </Grid>
+</Page>

@@ -1,0 +1,30 @@
+﻿<Window x:Class="WeaponStoreSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeaponStoreSystem"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="129*"/>
+            <RowDefinition  Height="28*"/>
+            <RowDefinition  Height="169*"/>
+            <RowDefinition  Height="109*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox   HorizontalAlignment="Center" TextWrapping="Wrap" Text="Input login" VerticalAlignment="Center" Width="456" x:Name="LoginTextbox" Height="109"/>
+        <Button Content="Log in" HorizontalAlignment="Center" VerticalAlignment="Center" Height="104" Width="456" Click="Button_Click" x:Name="LoginButton" Grid.Row="3" />
+        <PasswordBox HorizontalAlignment="Center" VerticalAlignment="Top" Width="456" Height="125" Grid.Row="2" x:Name="PasswordTextBox" Margin="0,6,0,0" />
+        <TextBlock HorizontalAlignment="Center" Margin="0,6,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Height="22" Width="456" Grid.RowSpan="2"/>
+
+
+    </Grid>
+</Window>
